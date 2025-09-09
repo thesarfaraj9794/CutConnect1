@@ -1,0 +1,176 @@
+import 'package:barber_booking_app/pages/login.dart';
+import 'package:flutter/material.dart';
+class Singup extends StatefulWidget {
+  const Singup({super.key});
+
+  @override
+  State<Singup> createState() => _SingupState();
+}
+
+class _SingupState extends State<Singup> {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      body: Container(
+        child: Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.only(top: 30.0, left: 15.0),
+              height: MediaQuery.of(context).size.height / 2,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFFB91635),
+                    Color(0Xff621d3c),
+                    Color(0xFF311937),
+                  ],
+                ),
+              ),
+              child: Text(
+                "Create Your\nAccount",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 40.0, left: 20.0,right: 30.0,bottom: 30.0),
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height / 5,
+              ),
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                   Text(
+                    "Name",
+                    style: TextStyle(
+                      color: Color(0xFFB91635),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Gmail",
+                      prefixIcon: Icon(Icons.person_2_outlined),
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  Text(
+                    "Gmail",
+                    style: TextStyle(
+                      color: Color(0xFFB91635),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Gmail",
+                      prefixIcon: Icon(Icons.mail_lock_outlined),
+                    ),
+                  ),
+                  SizedBox(height: 15.0),
+                  Text(
+                    "Password",
+                    style: TextStyle(
+                      color: Color(0xFFB91635),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Password",
+                      prefixIcon: Icon(Icons.password_outlined),
+                    ),
+                    obscureText: true,
+                  ),
+                  SizedBox(height: 15.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      
+                    ],
+                  ),
+                  SizedBox(height: 20.0),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 10.0),
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFFB91635),
+                          Color(0Xff621d3c),
+                          Color(0xFF311937),
+                        ],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Sing up",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Row(
+                    
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        "Already have an account?",
+                        style: TextStyle(
+                          color: Color(0xFF311937),
+                          fontSize: 10.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Sing In",
+                          style: TextStyle(
+                            color: Color(0Xff621d3c),
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+  
