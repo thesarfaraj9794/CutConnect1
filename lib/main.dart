@@ -16,13 +16,7 @@ void main() async{
   // ✅ Initialize Firebase with platform-specific options
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyC9WHbSkUobTDOgLbO2zeeufsSbr4RzQxM",
-      authDomain: "barberapp-48131.firebaseapp.com",
-      projectId: "barberapp-48131",
-      storageBucket: "barberapp-48131.firebasestorage.app",
-      messagingSenderId: "1099377172997",
-      appId: "1:1099377172997:web:e074746fd9af88db7ef26c",
-      measurementId: "G-JJHEFKYMYN",
+     //here to use firebases api
     ),
   );
 
@@ -148,3 +142,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
